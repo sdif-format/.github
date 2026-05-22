@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/sdif-logo.png" alt="SDIF Format" width="420">
+  <img src="assets/sdif-logo-t.png" alt="SDIF Format" width="420">
 </p>
 
 <p align="center">
