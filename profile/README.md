@@ -1,4 +1,13 @@
-# SDIF Format
+<p align="center">
+  <img src="assets/sdif-logo.png" alt="SDIF Format" width="420">
+</p>
+
+<p align="center">
+  <strong>Semantic Data Interchange Format</strong><br>
+  Compact, semantic and canonicalizable structured data for AI agents, deterministic workflows and human-auditable records.
+</p>
+
+---
 
 We are building **SDIF — Semantic Data Interchange Format**: a compact, semantic and canonicalizable data format designed for AI agents, deterministic workflows and human-auditable structured data.
 
