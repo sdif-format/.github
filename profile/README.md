@@ -24,10 +24,35 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/status-moving%20toward%20v1.0-2563eb?style=flat-square" alt="Status">
-  <img src="https://img.shields.io/badge/focus-AI%20native%20data-111827?style=flat-square" alt="AI native data">
-  <img src="https://img.shields.io/badge/design-canonicalizable-0f766e?style=flat-square" alt="Canonicalizable">
-  <img src="https://img.shields.io/badge/ecosystem-open%20tooling-374151?style=flat-square" alt="Open tooling">
+  <a href="https://pypi.org/project/sdif-format/">
+    <img src="https://img.shields.io/pypi/v/sdif-format.svg?style=flat-square" alt="PyPI">
+  </a>
+  <a href="https://pypi.org/project/sdif-format/">
+    <img src="https://img.shields.io/pypi/pyversions/sdif-format.svg?style=flat-square" alt="Python versions">
+  </a>
+  <a href="https://github.com/sdif-format/sdif/releases/tag/v1.0.0">
+    <img src="https://img.shields.io/badge/status-v1.0.0%20released-2563eb?style=flat-square" alt="Status">
+  </a>
+  <a href="https://github.com/sdif-format/sdif">
+    <img src="https://img.shields.io/badge/design-canonicalizable-0f766e?style=flat-square" alt="Canonicalizable">
+  </a>
+  <a href="https://github.com/sdif-format">
+    <img src="https://img.shields.io/badge/ecosystem-open%20tooling-374151?style=flat-square" alt="Open tooling">
+  </a>
+</p>
+
+<br>
+
+<p align="center">
+  <code>pip install sdif-format</code>
+</p>
+
+<p align="center">
+  <a href="https://pypi.org/project/sdif-format/"><strong>PyPI package</strong></a>
+  ·
+  <a href="https://github.com/sdif-format/sdif/releases/tag/v1.0.0"><strong>v1.0.0 release</strong></a>
+  ·
+  <a href="https://sdif-format.github.io/"><strong>Documentation</strong></a>
 </p>
 
 <br>
@@ -335,20 +360,20 @@ Not as a replacement for every format, but as a focused layer for structured dat
     <td align="center" width="33%">
       <strong>Specification</strong>
       <br><br>
-      Moving toward<br>
+      Stable<br>
       <strong>v1.0</strong>
     </td>
     <td align="center" width="33%">
-      <strong>Tooling</strong>
+      <strong>Python tooling</strong>
       <br><br>
-      Parser, CLI and<br>
-      canonicalization in progress
+      Parser, CLI,<br>
+      canonicalization and validation
     </td>
     <td align="center" width="33%">
-      <strong>Benchmarks</strong>
+      <strong>Distribution</strong>
       <br><br>
-      Token and size comparisons<br>
-      under active development
+      Available on PyPI as<br>
+      <strong>sdif-format</strong>
     </td>
   </tr>
 </table>
@@ -357,14 +382,24 @@ Not as a replacement for every format, but as a focused layer for structured dat
 
 <br>
 
-The project is currently focused on building a credible v1.0 foundation:
+SDIF v1.0.0 is available as a public Python package:
 
-* stabilize the core syntax;
-* define canonicalization rules clearly;
-* improve JSON ↔ SDIF conversion;
+```bash
+pip install sdif-format
+```
+
+```python
+import sdif
+```
+
+The current focus is now on adoption, documentation, conformance and ecosystem tooling:
+
+* keep the v1.0 format contract stable;
+* improve examples and documentation;
+* expand conformance fixtures;
 * publish reproducible benchmarks;
-* document real-world examples;
-* keep the implementation small, honest and testable.
+* improve editor and syntax tooling;
+* gather feedback from real-world datasets and AI workflows.
 
 We prefer evidence over claims. Benchmarks, golden files and reproducible examples are part of the product, not marketing decoration.
 
@@ -467,6 +502,13 @@ If SDIF works, it should feel obvious after you use it.
 
 ## Contact
 
-For now, the best place to follow the project is this GitHub organization.
+The best place to follow the project is this GitHub organization.
 
-More documentation, examples and public materials will be added as the v1.0 specification stabilizes.
+Useful links:
+
+* Core repository: https://github.com/sdif-format/sdif
+* Python package: https://pypi.org/project/sdif-format/
+* Documentation: https://sdif-format.github.io/
+* Issues and feedback: https://github.com/sdif-format/sdif/issues
+
+Constructive criticism, real datasets, benchmark ideas and parser feedback are especially welcome
