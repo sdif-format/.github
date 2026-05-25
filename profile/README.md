@@ -30,10 +30,10 @@
   <a href="https://pypi.org/project/sdif-format/">
     <img src="https://img.shields.io/pypi/pyversions/sdif-format.svg?style=flat-square" alt="Python versions">
   </a>
-  <a href="https://github.com/sdif-format/sdif/releases/tag/v1.0.0">
+  <a href="https://github.com/sdif-format/sdif-py/releases">
     <img src="https://img.shields.io/badge/status-v1.0.0%20released-2563eb?style=flat-square" alt="Status">
   </a>
-  <a href="https://github.com/sdif-format/sdif">
+  <a href="https://github.com/sdif-format/sdif-py">
     <img src="https://img.shields.io/badge/design-canonicalizable-0f766e?style=flat-square" alt="Canonicalizable">
   </a>
   <a href="https://github.com/sdif-format">
@@ -50,7 +50,7 @@
 <p align="center">
   <a href="https://pypi.org/project/sdif-format/"><strong>PyPI package</strong></a>
   ·
-  <a href="https://github.com/sdif-format/sdif/releases/tag/v1.0.0"><strong>v1.0.0 release</strong></a>
+  <a href="https://github.com/sdif-format/sdif-py/releases"><strong>v1.0.0 release</strong></a>
   ·
   <a href="https://sdif-format.github.io/"><strong>Documentation</strong></a>
 </p>
@@ -116,9 +116,9 @@ id release.v1
 title "Release readiness plan"
 
 items[id,status,owner,evidence]:
-  R1	done	build	"reports/build.md"
-  R2	open	qa	"reports/tests.md"
-  R3	done	security	"reports/audit.md"
+  R1 done build "reports/build.md"
+  R2 open qa "reports/tests.md"
+  R3 done security "reports/audit.md"
 
 rel:
   release.v1 validated_by R1
@@ -141,47 +141,89 @@ rel:
 
 ## Ecosystem
 
-This GitHub organization hosts the official SDIF ecosystem: the core format, reference tooling, benchmarks, examples and syntax integrations.
+This GitHub organization hosts the official SDIF ecosystem: the core format, reference tooling, benchmarks, examples, libraries, and editor extensions.
 
 <div align="center">
 
 <table>
   <tr>
     <td width="33%" valign="top">
+      <p><sub>PYTHON CLIENT & CLI</sub></p>
+      <h3>sdif-py</h3>
       <p>
-        <sub>CORE FORMAT</sub>
+        Specification, parser, canonicalizer, and CLI.<br>
+        The normative reference implementation.
       </p>
-      <h3>sdif</h3>
-      <p>
-        Specification, parser, canonicalizer and CLI for the Semantic Data Interchange Format.
-      </p>
-      <p>
-        <a href="https://github.com/sdif-format/sdif"><strong>Explore sdif →</strong></a>
-      </p>
+      <p><a href="https://github.com/sdif-format/sdif-py"><strong>Explore sdif-py →</strong></a></p>
     </td>
     <td width="33%" valign="top">
+      <p><sub>SPECIFICATION (SSOT)</sub></p>
+      <h3>sdif-spec</h3>
       <p>
-        <sub>MEASUREMENT</sub>
+        Official format specification, canonicalization rules,<br>
+        and portable conformance test suite.
       </p>
+      <p><a href="https://github.com/sdif-format/sdif-spec"><strong>View specification →</strong></a></p>
+    </td>
+    <td width="33%" valign="top">
+      <p><sub>BENCHMARKS</sub></p>
       <h3>sdif-benchmarks</h3>
       <p>
-        Reproducible benchmark datasets and reports for comparing SDIF with existing formats.
+        Reproducible benchmark datasets and reports comparing SDIF with JSON, YAML, XML, and CSV.
       </p>
+      <p><a href="https://github.com/sdif-format/sdif-benchmarks"><strong>View benchmarks →</strong></a></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="33%" valign="top">
+      <p><sub>RUST IMPLEMENTATION</sub></p>
+      <h3>sdif-rs</h3>
       <p>
-        <a href="https://github.com/sdif-format/sdif-benchmarks"><strong>View benchmarks →</strong></a>
+        Pure Rust parser implementation with a span-annotated AST designed for editor tooling.
       </p>
+      <p><a href="https://github.com/sdif-format/sdif-rs"><strong>Explore sdif-rs →</strong></a></p>
     </td>
     <td width="33%" valign="top">
+      <p><sub>LANGUAGE SERVER (LSP)</sub></p>
+      <h3>sdif-lsp</h3>
       <p>
-        <sub>SYNTAX TOOLING</sub>
+        LSP language server binary (tower-lsp) providing real-time diagnostics and IDE features.
       </p>
+      <p><a href="https://github.com/sdif-format/sdif-lsp"><strong>View sdif-lsp →</strong></a></p>
+    </td>
+    <td width="33%" valign="top">
+      <p><sub>EDITOR INTEGRATION</sub></p>
+      <h3>vscode-sdif</h3>
+      <p>
+        VS Code extension client providing syntax highlighting, diagnostics, and LSP configuration.
+      </p>
+      <p><a href="https://github.com/sdif-format/vscode-sdif"><strong>Open extension →</strong></a></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="33%" valign="top">
+      <p><sub>GRAMMAR FOUNDATION</sub></p>
       <h3>tree-sitter-sdif</h3>
       <p>
-        Tree-sitter grammar foundation for syntax highlighting and editor integrations.
+        Tree-sitter grammar foundation for syntax highlighting and incremental parsing.
       </p>
+      <p><a href="https://github.com/sdif-format/tree-sitter-sdif"><strong>Open grammar →</strong></a></p>
+    </td>
+    <td width="33%" valign="top">
+      <p><sub>DOCUMENTATION</sub></p>
+      <h3>sdif-format.github.io</h3>
       <p>
-        <a href="https://github.com/sdif-format/tree-sitter-sdif"><strong>Open grammar →</strong></a>
+        Official documentation website containing specification guides, tutorials, and examples.
       </p>
+      <p><a href="https://github.com/sdif-format/sdif-format.github.io"><strong>Read docs →</strong></a></p>
+    </td>
+    <td width="33%" valign="top">
+      <p><sub>ORGANIZATION META</sub></p>
+      <h3>.github</h3>
+      <p>
+        Organization profile, assets, and shared community configuration files.
+      </p>
+      <p><a href="https://github.com/sdif-format/.github"><strong>View profile →</strong></a></p>
     </td>
   </tr>
 </table>
@@ -195,12 +237,17 @@ This GitHub organization hosts the official SDIF ecosystem: the core format, ref
 
 <br>
 
-| Repository                                                            | Purpose                                                          |
+| Repository | Purpose |
 | --------------------------------------------------------------------- | ---------------------------------------------------------------- |
-| [`sdif`](https://github.com/sdif-format/sdif)                         | Core format, specification, parser, canonicalization and CLI     |
-| [`sdif-benchmarks`](https://github.com/sdif-format/sdif-benchmarks)   | Benchmark datasets, reports and comparison tooling               |
-| [`tree-sitter-sdif`](https://github.com/sdif-format/tree-sitter-sdif) | Grammar, syntax highlighting and editor integration foundation   |
-| [`.github`](https://github.com/sdif-format/.github)                   | Organization profile, shared community files and public metadata |
+| [`sdif-py`](https://github.com/sdif-format/sdif-py)                   | Core Python parser, validator, canonicalizer, and CLI |
+| [`sdif-spec`](https://github.com/sdif-format/sdif-spec)               | Official format specification and conformance test suite (SSOT) |
+| [`sdif-benchmarks`](https://github.com/sdif-format/sdif-benchmarks)   | Benchmark datasets, reports, and comparison tooling |
+| [`sdif-rs`](https://github.com/sdif-format/sdif-rs)                   | Rust parser crate with span-annotated AST |
+| [`sdif-lsp`](https://github.com/sdif-format/sdif-lsp)                 | LSP language server binary |
+| [`tree-sitter-sdif`](https://github.com/sdif-format/tree-sitter-sdif) | Tree-sitter grammar foundation for syntax highlighting |
+| [`vscode-sdif`](https://github.com/sdif-format/vscode-sdif)           | VS Code extension client for SDIF |
+| [`sdif-format.github.io`](https://github.com/sdif-format/sdif-format.github.io) | Public documentation website (Docusaurus) |
+| [`.github`](https://github.com/sdif-format/.github)                   | Organization profile, assets, and shared GitHub community files |
 
 </details>
 
@@ -394,12 +441,12 @@ import sdif
 
 The current focus is now on adoption, documentation, conformance and ecosystem tooling:
 
-* keep the v1.0 format contract stable;
-* improve examples and documentation;
-* expand conformance fixtures;
-* publish reproducible benchmarks;
-* improve editor and syntax tooling;
-* gather feedback from real-world datasets and AI workflows.
+- keep the v1.0 format contract stable;
+- improve examples and documentation;
+- expand conformance fixtures;
+- publish reproducible benchmarks;
+- improve editor and syntax tooling;
+- gather feedback from real-world datasets and AI workflows.
 
 We prefer evidence over claims. Benchmarks, golden files and reproducible examples are part of the product, not marketing decoration.
 
@@ -506,9 +553,9 @@ The best place to follow the project is this GitHub organization.
 
 Useful links:
 
-* Core repository: https://github.com/sdif-format/sdif
-* Python package: https://pypi.org/project/sdif-format/
-* Documentation: https://sdif-format.github.io/
-* Issues and feedback: https://github.com/sdif-format/sdif/issues
+- Core repository: <https://github.com/sdif-format/sdif-py>
+- Python package: <https://pypi.org/project/sdif-format/>
+- Documentation: <https://sdif-format.github.io/>
+- Issues and feedback: <https://github.com/sdif-format/sdif-py/issues>
 
 Constructive criticism, real datasets, benchmark ideas and parser feedback are especially welcome
